@@ -6,7 +6,7 @@ public class Main {
             if (employee[i].getSalary() < employee[min].getSalary()) {
                 min = i;
                 System.out.println("Минимальная зарплата: " + employee[i].getSalary() + "₽ - " + employee[i].getName());
-            } else if (employee[i].getSalary() > employee[max].getSalary()) {
+            } if (employee[i].getSalary() > employee[max].getSalary()) {
                 max = i;
                 System.out.println("Максимальная зарплпта: " + employee[i].getSalary() + "₽ - " + employee[i].getName());
             }
@@ -37,7 +37,7 @@ public class Main {
     public static void averageSalary(Employee[] employee) {
         int x = 0;
         for (int i = 0; i < employee.length; i++) {
-            x += employee[i].getSalary() / 10;
+            x += employee[i].getSalary() / employee.length;
         }
         System.out.println(x + "₽ : Средняя зарплата.");
     }
